@@ -1,4 +1,4 @@
-function padLeft(value: string, padding: number | string): string {
+function padLeft(value: string, padding: number | string): any {
 // si padding es un numero, return `${Array(padding + 1).join(' ')}${value}`
 // si padding es una cadena, return padding + value
 
