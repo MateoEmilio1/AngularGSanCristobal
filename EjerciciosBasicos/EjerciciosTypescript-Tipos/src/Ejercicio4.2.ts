@@ -14,8 +14,9 @@ else if (typeof padding === "string")
 
 console.log('[Ejercicio 4.2]', `
 ${padLeft('', 0)}
-${padLeft('', '')}
-${padLeft('', '')}
-${padLeft('', '')}
-${padLeft('', '')}
+${padLeft('a', 1)}
+${padLeft('e', 'a') }
+${padLeft('i', 2)}
+${padLeft('o', 'b')}
+${padLeft('u', 3)}
 `);
