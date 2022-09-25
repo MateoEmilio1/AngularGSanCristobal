@@ -9,4 +9,4 @@ function padLeft(value, padding) {
         return padding + value;
     }
 }
-console.log('[Ejercicio 4.2]', "\n" + padLeft('', 0) + "\n" + padLeft('', '') + "\n" + padLeft('', '') + "\n" + padLeft('', '') + "\n" + padLeft('', '') + "\n");
+console.log('[Ejercicio 4.2]', "\n" + padLeft('', 0) + "\n" + padLeft('a', 1) + "\n" + padLeft('e', 'a') + "\n" + padLeft('i', 2) + "\n" + padLeft('o', 'b') + "\n" + padLeft('u', 3) + "\n");
