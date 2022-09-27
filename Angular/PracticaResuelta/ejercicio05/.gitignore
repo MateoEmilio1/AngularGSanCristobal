@@ -6,7 +6,7 @@
 /out-tsc
 /bazel-out
 
-# Node
+# Node aca borre el /node-modules
 npm-debug.log
 yarn-error.log
 
