@@ -4,11 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [AppComponent],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: []
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
