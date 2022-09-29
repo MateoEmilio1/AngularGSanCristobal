@@ -2,9 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <h1>Congratulations!</h1>
-    <h3>You bootstrapped the App Module!</h3>
-  `,
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent { }
+
+export class AppComponent { 
+    tittle = "Gestionando el mismo valor en dos componentes";
+
+    valor= 7;
+
+}
