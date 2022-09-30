@@ -1,15 +1,29 @@
-
-<div>
+<div class="dataColumn">
   <div style="margin-top:30px;">
-    Evento: {{ event.name }} 
+    Evento:  
   </div>
   <div>
-    Fecha: {{ event.date }}
+    Fecha:  
   </div>
   <div>
-    Hora: {{ event.time }}
+    Hora:  
   </div>
   <div>
-    Direccion: {{ event.location.address }}, {{ event.location.city }}, {{ event.location.country }}
+    Direccion:  
+  </div>
+</div>
+
+<div class="dataColumn">
+  <div style="margin-top:30px;">
+     {{ event.name }} 
+  </div>
+  <div>
+     {{ event.date }}
+  </div>
+  <div>
+     {{ event.time }}
+  </div>
+  <div>
+     {{ event.location.address }}, {{ event.location.city }}, {{ event.location.country }}
   </div>
 </div>
