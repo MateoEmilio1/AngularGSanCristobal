@@ -1,15 +1,23 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-dos',
   templateUrl: './dos.component.html',
-  styleUrls: ['./dos.component.css']
+  styleUrls: ['./dos.component.css'],
+  inputs: ['valorDos']
 })
 export class DosComponent implements OnInit {
 
-  @Input() valorDos = 2;
+  valorDos = 2;
+
+  @Output() avisar= new EventEmitter<string>();
 
   constructor() { }
+
+  avisarAlPadre(): void{
+    this.avisar.emit('Hola desde el hijo (componenteDos)');
+  }
 
   ngOnInit(): void {
   }

@@ -1,29 +1,15 @@
-<div>
-  <div style="margin-top:30px;">
-    Evento:
-  </div>
-  <div>
-    Fecha:
-  </div>
-  <div>
-    Hora:
-  </div>
-  <div>
-    Direccion:
-  </div>
-</div>
 
 <div>
   <div style="margin-top:30px;">
-    {{ event.name }} 
+    Evento: {{ event.name }} 
   </div>
   <div>
-    {{ event.date }}
+    Fecha: {{ event.date }}
   </div>
   <div>
-    {{ event.time }}
+    Hora: {{ event.time }}
   </div>
   <div>
-    {{ event.location.address }}, {{ event.location.city }}, {{ event.location.country }}
+    Direccion: {{ event.location.address }}, {{ event.location.city }}, {{ event.location.country }}
   </div>
 </div>

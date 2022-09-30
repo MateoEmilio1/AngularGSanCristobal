@@ -1,3 +1,14 @@
 <h1> {{tittle}} </h1>
-<app-uno [valorUno]="valor"> </app-uno>
-<app-dos [valorDos]="valor"> </app-dos>
+<app-uno [valorUno]="valor" *ngIf="valor != 0"> </app-uno> <!--Si el valor es cero lo saca del DOM (lo saca, no lo oculta) -->
+<app-dos [valorDos]="valor" (avisar)="elHijoAvisoAlgo($event)" *ngIf="valor != 0"> </app-dos>
+<h2> Otro valor (accediendo desde una propiedad distinta)</h2>
+<app-tres [otroValor]="valor"> </app-tres>
+
+<ul [ngClass]="estilos">
+    <li *ngFor="let item of elements; let i= index">{{i}} / {{item}} </li> <!-- El ngFor me permite recorrer listas de elementos -->
+                                                    <!-- Ver que elements esta dentro de la clase (debe estarlo) y elementos esta fuera-->>
+                                                    <!--Por cada item de elements, lo muentra mediante interpolacion-->
+                                                    <!--Supongamos que necesitamos saber al valor de iteracion, 
+                                                        declaramos una variable i que tome el valor del indice, para asi acceder 
+                                                        dentro de la estructura ngFor al numero de iteracion que estoy utilizando -->
+</ul>
