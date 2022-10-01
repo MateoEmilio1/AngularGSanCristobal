@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { OrigenService } from '../origen.service';
 
 
 @Component({
@@ -13,7 +14,9 @@ export class DosComponent implements OnInit {
 
   @Output() avisar= new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private service: OrigenService) {
+    console.log("contruyo el component dos");
+   }
 
   avisarAlPadre(): void{
     this.avisar.emit('Hola desde el hijo (componenteDos)');

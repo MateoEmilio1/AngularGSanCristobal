@@ -52,15 +52,27 @@ export class EventsListComponent implements OnInit {
 
   setCurrentStyles(format?: string) {
     // estilos CSS: asigna el estado actual de las propiedades del componente
+ 
+    if(format === 'InPerson') {
+      return {color: 'green'};
+    }
+    if(format === 'Online') {
+      return {color: 'red'};
+    }
+    return {color: '#aaa'}
+    
+  }             
+    
     /**
      * this.currentStyles = {
     'font-style': this.canSave ? 'italic' : 'normal', 
     'font-weight': !this.isUnchanged ? 'bold' : 'normal',
     'font-size': this.isSpecial ? '24px' : '12px'
+
     };
      */
-};
+}
   
   
 
-}
+

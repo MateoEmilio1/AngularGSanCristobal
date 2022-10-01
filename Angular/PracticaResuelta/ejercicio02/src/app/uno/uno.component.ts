@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { OrigenService } from '../origen.service';
 
 @Component({
   selector: 'app-uno',
@@ -8,7 +9,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UnoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: OrigenService) { 
+    console.log("contruyo el component uno");
+  }
 
   valorUno = 2; 
 
