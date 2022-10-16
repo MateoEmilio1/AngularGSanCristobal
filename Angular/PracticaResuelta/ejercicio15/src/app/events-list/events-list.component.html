@@ -1,20 +1,29 @@
-<div>
-  <h3>All of the events should show below</h3>
+<nav>
+  <ul>
+    <li> <a routerLink="/"    
+      routerLinkActive="menuSelected"
+      [routerLinkActiveOptions]="{exact: true}"
+      >Volver a Home</a></li> 
+      <!-- gracias a la propiedad routerLinkActiveOptions, solo se va a pintar cuando sea exacto el routerLink "/"
+        (sin el routerLinkActiveOptions)El home va a seguir pintado porque la ruta sigue coincidiendo cuando lo cambio-->
+    
+  </ul>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Event</th>
-        <th>Date</th>      
-        <th>Time</th>
-        <th>Address</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let event of events">
-        <td>{{event.name}}</td>
-        <td>{{event.date}} </td>      
-        <td>{{event.time}}</td>
-        <td>{{event.location.address}}, {{event.location.city}}, {{event.location.country}}</td>
-      </tr>
+</nav>
   
+ 
+  <thead>
+    
+  <th>Listado de Eventos</th>
+    
+  </thead>
+   
+  <tr *ngFor="let evento of eventos" routerLinkActive="menuSelected">
+    <a [routerLink]="['/eventos/detalle',evento.id]">
+       {{evento.name}}
+    </a>
+  </tr>
+  
+
+  <!-- <li> <a routerLink="/eventos/detalle" routerLinkActive="menuSelected"> Detalle </a> </li> -->
+<router-outlet></router-outlet>

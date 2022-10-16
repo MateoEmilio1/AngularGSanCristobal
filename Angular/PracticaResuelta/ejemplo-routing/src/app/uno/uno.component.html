@@ -1,1 +1,14 @@
 <p>uno works!</p>
+<nav>
+<ul>
+    <li> <a routerLink="/"    
+      routerLinkActive="menuSelected"
+      [routerLinkActiveOptions]="{exact: true}"
+      >Home</a></li> 
+      <!-- gracias a la propiedad routerLinkActiveOptions, solo se va a pintar cuando sea exacto el routerLink "/"
+        (sin el routerLinkActiveOptions)El home va a seguir pintado porque la ruta sigue coincidiendo cuando lo cambio-->
+    <li> <a routerLink="/uno/listado" routerLinkActive="menuSelected"> Listado </a> </li> <!-- Aca si se necesita poner la barra para indicar el componente-->
+    <li> <a routerLink="/uno/detalle" routerLinkActive="menuSelected"> Detalle </a> </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet> <!--Necesario para que funcionen los hijos-->

@@ -2,9 +2,20 @@
 
 <nav>
   <ul>
-    <li> <a routerLink="/uno" routerLinkActive="menuSelected"> Uno </a> </li>
+    <li> <a routerLink="/"    
+      routerLinkActive="menuSelected"
+      [routerLinkActiveOptions]="{exact: true}"
+      >Home</a></li> 
+      <!-- gracias a la propiedad routerLinkActiveOptions, solo se va a pintar cuando sea exacto el routerLink "/"
+        (sin el routerLinkActiveOptions)El home va a seguir pintado porque la ruta sigue coincidiendo cuando lo cambio-->
+    <li> <a routerLink="/uno" routerLinkActive="menuSelected"> Uno </a> </li> <!-- Aca si se necesita poner la barra para indicar el componente-->
     <li> <a routerLink="/dos" routerLinkActive="menuSelected"> Dos </a> </li>
   </ul>
+  <!--Lo que hace el routerLinkActive es especificar el estilo que quiero que use cuando la ruta esta activa (VER CSS)
+  podria haberlo modificado como: PROPIEDAD [routerLinkActive]="'rojo verde'" si es que lo ponia en el CSS de esa forma
+  
+  
+  -->
 </nav>
 
 

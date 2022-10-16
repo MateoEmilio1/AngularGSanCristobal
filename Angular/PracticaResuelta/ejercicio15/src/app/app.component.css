@@ -1,0 +1,4 @@
+.menuSelected{ /* El cual uso desde el html, voy a usarlo cuando la ruta esta activa routerLinkActive*/
+    color: red;
+    background-color: green;
+}

@@ -1,22 +1,12 @@
 import { Injectable } from '@angular/core';
 import { EventsListComponent } from './events-list/events-list.component';
-
+import { Evento } from './evento';
+import { userInfo } from 'os';
+import { id } from 'ethers/lib/utils';
 // https://bobbyhadz.com/blog/typescript-object-literal-may-only-specify-known-properties#:~:text=The%20%22Object%20literal%20may%20only,names%20if%20you%20have%20any.
 
-export interface Event  {
-	id: number;
-	name: string;
-	date: string;
-	time: string;
-	location: {
-		address: string;
-		city: string;
-		country: string;
-	};
 
-}
-
-const events: Event[] = [
+const events: Evento[] = [
 	{
 		id: 1,
 		name: "Angular Connect",
@@ -71,8 +61,16 @@ export class EventosService {
   constructor() { }
 
 
-  getEventos(): Event[] {
+  getEventos(): Evento[] {
     return events;
+  }
+
+  getEventoById(id: string | null): Evento | undefined{
+	if(!id){
+		return undefined
+	}
+	return events.find(evento => evento.id === +id)
+
   }
 
 }

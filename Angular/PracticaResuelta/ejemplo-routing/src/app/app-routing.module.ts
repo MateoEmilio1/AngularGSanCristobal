@@ -1,12 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { AuthGuard } from './auth.guard';
+import { DetalleComponent } from './detalle/detalle.component';
 import { DosComponent } from './dos/dos.component';
+import { HomeComponent } from './home/home.component';
+import { ListadoComponent } from './listado/listado.component';
 import { UnoComponent } from './uno/uno.component';
 
-const routes: Routes = [
-  {path: 'uno', component: UnoComponent},
-  {path: 'dos', component: DosComponent, data: { title: 'Hola soy el comp dos'} }
+const routes: Routes = [ //dentro de este modulo defino cuales son las rutas que va a tener disponible mi app
+  //las defino como objetos dentro de este arreglo
+  
+  {path: 'uno', component: UnoComponent, children: [ //rutas hijas
+    {path: 'listado', component: ListadoComponent},
+    {path: 'detalle/:id', component: DetalleComponent,
+      canDeactivate: [AuthGuard]}
+  ]}, //el 'uno' va sin la / ('/uno'esta mal) , le paso el componente como parametro
+  {path: 'dos', component: DosComponent, data: { title: 'Hola soy el comp dos'}, canActivate: [AuthGuard]},
+  {path: '',  component: HomeComponent}
 
 ]; //las defino como objeto dentro de este arreglo
 

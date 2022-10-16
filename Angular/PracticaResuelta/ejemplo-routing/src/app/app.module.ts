@@ -5,16 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UnoComponent } from './uno/uno.component';
 import { DosComponent } from './dos/dos.component';
+import { UsersService } from './users.service';
+import { HomeComponent } from './home/home.component';
+import { ListadoComponent } from './listado/listado.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UnoComponent,
-    DosComponent
+    DosComponent,
+    HomeComponent,
+    ListadoComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

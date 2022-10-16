@@ -1,0 +1,14 @@
+<p>Detalle del evento</p>
+
+
+<div *ngIf="evento" >
+    <h3>{{evento?.name}}</h3>
+    <p>Date: {{evento?.date}} </p>      
+    <p>Time: {{evento?.time}}</p>
+    <p>Location: {{evento.location?.address}}, {{evento.location?.city}}, {{evento.location?.country}}</p>
+</div>
+<li> <a routerLink="/eventos" routerLinkActive="menuSelected"> Elegir otro evento</a></li>
+
+<div *ngIf="!evento">
+    <p>No existe</p>
+</div> 
