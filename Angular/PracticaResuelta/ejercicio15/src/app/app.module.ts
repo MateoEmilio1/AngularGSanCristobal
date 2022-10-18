@@ -6,6 +6,9 @@ import { EventsListComponent } from './events-list/events-list.component';
 import { EventosService } from './eventos.service';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthGuard } from './auth.guard';
+import { ExtraOptions, RouterModule, Routes, ROUTES } from '@angular/router';
+
 
 
 @NgModule({
@@ -17,9 +20,9 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  providers: [EventosService],
+  providers: [EventosService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

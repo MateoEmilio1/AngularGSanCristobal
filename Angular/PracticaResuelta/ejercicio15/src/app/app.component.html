@@ -1,12 +1,26 @@
-<h1>Bienvenido! Pantalla principal</h1>
-<nav>
-    <ul>
-        <li> <a routerLink="/" routerLinkActive="menuSelected"
-            [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+<!DOCTYPE html>
+<html>
+<link href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    rel="stylesheet">
 
-        <li> <a routerLink="/eventos" routerLinkActive="menuSelected"> Lista de eventos</a></li>
-        
-    </ul>
-</nav>
+<body>
+    <div class="contenedor">
+        <h1>Bienvenido! Pantalla principal</h1>
+            <nav>
+                <ul>
+                    <li> <a routerLink="/" routerLinkActive="menuSelected"
+                        [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+            
+                    <li> <a routerLink="/eventos" routerLinkActive="menuSelected"> Lista de eventos</a></li>
+                    
+                </ul>
+            </nav>
+    </div>
+</body>
+
+
+
 
 <router-outlet></router-outlet> <!--Funcionalidad a los componentes-->
+</html>

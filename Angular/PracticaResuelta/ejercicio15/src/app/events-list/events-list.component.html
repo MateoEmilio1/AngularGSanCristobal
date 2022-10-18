@@ -1,3 +1,4 @@
+<div class="contenedor">
 <nav>
   <ul>
     <li> <a routerLink="/"    
@@ -18,12 +19,18 @@
     
   </thead>
    
-  <tr *ngFor="let evento of eventos" routerLinkActive="menuSelected">
-    <a [routerLink]="['/eventos/detalle',evento.id]">
-       {{evento.name}}
-    </a>
+  <div>
+    <tr *ngFor="let evento of eventos" routerLinkActive="menuSelected">
+      <a [routerLink]="['/eventos/detalle',evento.id]">
+        {{evento.name}}
+     </a>
+    </tr>
+  </div>
+
+  <tr>
+    <td><a [routerLink]="['/eventos/detalle', 42]">Evento invalido</a></td>
   </tr>
   
-
+</div>
   <!-- <li> <a routerLink="/eventos/detalle" routerLinkActive="menuSelected"> Detalle </a> </li> -->
 <router-outlet></router-outlet>

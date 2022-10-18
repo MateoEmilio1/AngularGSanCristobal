@@ -1,4 +1,5 @@
-<p>Detalle del evento</p>
+<div class="contenedor">
+<h2>Detalle del evento</h2>
 
 
 <div *ngIf="evento" >
@@ -7,8 +8,18 @@
     <p>Time: {{evento?.time}}</p>
     <p>Location: {{evento.location?.address}}, {{evento.location?.city}}, {{evento.location?.country}}</p>
 </div>
-<li> <a routerLink="/eventos" routerLinkActive="menuSelected"> Elegir otro evento</a></li>
 
 <div *ngIf="!evento">
     <p>No existe</p>
 </div> 
+
+<br>
+<p>Evento revisado: </p>
+<input type="checkbox" (change)="eventoRevisado()">Revisado
+<br>
+<br>
+
+<button (click)="returnToEvents()">Volver a eventos</button>
+
+
+</div>
